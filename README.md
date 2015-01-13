@@ -2,7 +2,7 @@
 node_bash
 
 run casperjs script: 
-casperjs casper_script.js
+```casperjs casper_script.js```
 
 run casperjs script from nodejs:
 node node_bash.js
