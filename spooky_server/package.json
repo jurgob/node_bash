@@ -1,0 +1,16 @@
+{
+  "name": "spooky_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "spooky_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node spooky_server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.8",
+    "spooky": "^0.2.5"
+  }
+}

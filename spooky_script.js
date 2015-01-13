@@ -9,7 +9,7 @@ npm install
 2) run with
 run this project with:
 
-node spooky_server.js 
+node spooky_script.js 
 
 */
 
