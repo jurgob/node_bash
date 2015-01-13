@@ -20,7 +20,7 @@ cd spooky_server
 npm install
 ```
 
-spooky server run: 
+spooky server run (from spooky_server/ directory): 
 ```
 npm start
 ```
