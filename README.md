@@ -1,6 +1,8 @@
 # node_bash
 node_bash
 
+## some example
+
 run casperjs script: 
 
 ```
@@ -12,6 +14,8 @@ run casperjs script from nodejs:
 ```
 node node_bash.js
 ```
+
+## spooky server
 
 spooky server install: 
 
