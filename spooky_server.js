@@ -1,6 +1,13 @@
 /*   
 
-run with:
+1) install devs
+before run this file, install dependencies with: 
+
+npm install
+
+
+2) run with
+run this project with:
 
 node spooky_server.js 
 
