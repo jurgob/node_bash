@@ -1,3 +1,23 @@
+/*
+install: 
+
+  npm install
+
+run:
+
+  npm start
+
+try it: 
+  http://localhost:3000/ -> error
+  http://localhost:3000/sites/ -> site list
+  
+  http://localhost:3000/sites/google/ -> site details
+  http://localhost:3000/sites/google/scrap  -> det data from site
+  http://localhost:3000/sites/yahoo/
+  http://localhost:3000/sites/yahoo/scrap  
+
+*/
+
 var SpookyProcess = require('./spooky_module');
 var express = require('express');
 var app = express();
@@ -32,10 +52,9 @@ app.get('/sites/:site', function(req, res){
 });
 
 app.get('/sites/:site/scrap', function(req, res){
-	
 	var site_info = SITES[req.params.site] 
 	var _scrapScript = function(spooky){
-		spooky.start('https://www.google.co.uk', function() {
+		spooky.start(site_info.url, function() {
 	        this.emit('get_title', this.getTitle())
 	    });    
 	    spooky.run()
@@ -49,34 +68,10 @@ app.get('/sites/:site/scrap', function(req, res){
             });
     	});
 	}
-
 	new SpookyProcess(_scrapScript, _scrapListen)
-
-	//res.json();
-  
 });
-
-
-
-
 
 app.listen(3000);
 
-
-// var testScript = function(spooky){
-//     spooky.start('https://www.google.co.uk', function() {
-//         this.emit('print_bash', this.getTitle())
-//     });    
-//     spooky.run()
-// }
-
-// var testListen = function(spooky, def_listeners){
-//     def_listeners(spooky);
-//     spooky.on('print_bash', function (log) {
-//             console.log(log);
-//     });
-// }
-// new SpookyProcess(testScript, testListen)
-//var spooky_module1 = require('./spooky_module');
 
 
